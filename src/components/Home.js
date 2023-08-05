@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { fetchPosts } from '../redux/actions';
 import Navbar from './Navbar';
 import SearchBar from './SearchBar';
-import { FaGreaterThan } from 'react-icons/fa';
+import { FaShareAlt } from 'react-icons/fa';
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -40,7 +40,7 @@ const Home = () => {
                 <p>{post.body.slice(0, 70)}..<span className='read-more'>Read More...</span></p>
                
                 <div className='greaterthan'>
-                <FaGreaterThan /> 
+                <FaShareAlt /> 
                 </div>
                 
                 </div>

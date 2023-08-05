@@ -1,9 +1,10 @@
-// src/components/Navbar.js
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { FaHome, FaBookmark } from 'react-icons/fa';
+import { Link, useLocation } from 'react-router-dom';
+import { FaHome, FaBookmark, FaBell, FaUser } from 'react-icons/fa';
 
 const Navbar = () => {
+  const location = useLocation();
+
   return (
     <nav className="navbar">
       <div className='navbar-left'>
@@ -11,17 +12,18 @@ const Navbar = () => {
       </div>
       <div className='navbar-center'>
           <div className='navbar-icons'>
-            <Link to="/" className="nav-link">
+            <Link to="/" className={`nav-link ${location.pathname === '/' ? 'active' : ''}`}>
               <FaHome /> 
             </Link>
-            <Link to="/posts" className="nav-link">
+            <Link to="/another-route" className={`nav-link ${location.pathname === '/another-route' ? 'active' : ''}`}>
+              <FaBell /> 
+            </Link>
+            <Link to="/item/1" className={`nav-link ${location.pathname.includes('/item') ? 'active' : ''}`}>
               <FaBookmark /> 
             </Link>
-            <Link to="/posts" className="nav-link">
-              <FaBookmark /> 
-            </Link>
-            <Link to="/posts" className="nav-link">
-              <FaBookmark /> 
+            
+            <Link to="/yet-another-route" className={`nav-link ${location.pathname === '/yet-another-route' ? 'active' : ''}`}>
+              <FaUser /> 
             </Link>
           </div>
       </div>

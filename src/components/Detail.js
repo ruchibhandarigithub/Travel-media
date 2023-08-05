@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useSelector } from 'react-redux';
+
 import { useParams } from 'react-router-dom';
 import Navbar from './Navbar';
 import { FaHeart,FaShareAlt, FaArrowAltCircleLeft } from 'react-icons/fa';
@@ -12,9 +13,8 @@ const Detail = () => {
   if (!post) {
     return <div>Loading...</div>;
   }
-
-  const [displayType, setDisplayType] = useState('post'); // 'post' or 'user'
-
+  let displayType='post';
+  
   return (
     <div>
       <Navbar />
@@ -39,14 +39,12 @@ const Detail = () => {
         </div>
         <div className='info'>
           <div className='buttons'>
-            <button className={displayType === 'post' ? 'active' : ''} onClick={() => setDisplayType('post')}>Detail</button>
-            <button className={displayType === 'user' ? 'active' : ''} onClick={() => setDisplayType('user')}>UserInfo</button>
+            <button className={displayType === 'post' ? 'active' : ''} >Detail</button>
+            
           </div>
-          {displayType === 'post' ? (
+          
             <p>{post.body}</p>
-          ) : (
-            <p>This Post is Created by {post.id}</p>
-          )}
+         
         </div> 
       </div>
       <h2>

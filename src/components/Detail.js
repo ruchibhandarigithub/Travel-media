@@ -40,7 +40,7 @@ const Detail = () => {
         <div className='info'>
           <div className='buttons'>
             <button className={displayType === 'post' ? 'active' : ''} >Detail</button>
-            
+            <button } >Detail</button>
           </div>
           
             <p>{post.body}</p>

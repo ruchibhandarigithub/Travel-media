@@ -1,13 +1,131 @@
+/* Add your global styles here */
+
+/* Example */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 body {
+  font-family: 'Montserrat', sans-serif;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0; 
+  background: #F4F4F4;
+
+}
+.navbar {
+  display: flex;
+  align-items: center;
+   background: #F05A22;
+  color: white;
+  padding: 5px 20px;
+}
+.navbar-left{
+
+  flex-basis: 40%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.navbar-icons {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ justify-content: space-between;
+ border-radius: 20px;
+ gap: 60px;
+  padding: 10px 40px;
+}
+
+.icon {
+  cursor: pointer;
+}
+.search-bar{
+  margin: 20px;
+}
+input{
+  width: 80vw;
+  margin: 0 auto;
+  padding: 8px;
+  outline: 0;
+  border-radius: 10px;
+  border: 0;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Box shadow */
+}
+h2{
+  margin-left: 15px;
+}
+/* src/Grid.css */
+.grid-container {
+  margin: 2%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+/* src/components/Home.css */
+.grid-item {
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Box shadow */
+}
+
+.grid-item img{
+  width: 100%;
+  border-radius: 20px;
+}
+.link-style {
+  color: inherit; /* Inherit color from parent */
+  text-decoration: none; /* Remove underline */
+ 
+}
+p{
+  color:grey;
+}
+.read-more{
+  color:#F05A22;
+  font-weight: bold;
+}
+.data{
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.greaterthan{
+  width: 100px; /* Set the width you desire */
+  height: 50px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #F05A22;
+  border-radius: 5px;
+}
+.Selected-post{
+  margin: 2%;
+  display: flex;
+  gap:20px;
+}
+.img-div img{
+  border-radius: 20px;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .navbar-center {
+    margin-top: 10px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar-icons {
+    margin-top: 10px;
+  }
+  .search-bar{
+    margin: 20px 10px;
+  }
 }
